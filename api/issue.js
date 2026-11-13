@@ -22,7 +22,7 @@ export default async function handler(req, res) {
   }
 
   const GITHUB_REPO_OWNER = 'bountracker';
-  const GITHUB_REPO_NAME = 'bountracker.github.iobountracker.github.io';
+  const GITHUB_REPO_NAME = 'bountracker.github.io';
   const TOKEN = process.env.GITHUB_PAT;
 
   try {
@@ -34,7 +34,7 @@ export default async function handler(req, res) {
           Authorization: `Bearer ${TOKEN}`,
           Accept: 'application/vnd.github+json',
           'X-GitHub-Api-Version': '2022-11-28',
-          'User-Agent': 'Antigravity-App'
+          'User-Agent': 'bountracker-api'
         },
         body: JSON.stringify({
           title: `[${category || 'Geri Bildirim'}] ${title}`,
